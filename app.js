@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
- 
-app.get('/', (req, res) => {
-  res.send("Stella");
-});
+const lesson1Controller = require('./controllers/lesson1');
+
+app.get('/', lesson1Controller.joeRoute);
+app.get('/stella', lesson1Controller.stellaRoute);
+
 
 const port = 3000;
  
